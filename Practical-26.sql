@@ -33,25 +33,25 @@ CREATE TABLE employee_hobby (
 );
 
 -- Insert data in hobby table
-INSERT INTO hobby (`id`, `name`)
+INSERT INTO hobby(`id`, `name`)
 VALUES ('1', 'cricket'),
        ('2', 'music'),
        ('3', 'dancing');
 
 -- Insert data in employee table
-INSERT INTO employee (`id`, `first_name`, `last_name`, `age`, `mobile_number`, `address`)
+INSERT INTO employee(`id`, `first_name`, `last_name`, `age`, `mobile_number`, `address`)
 VALUES ('101', 'Naitik', 'Bagdi', '24', '7854686544', 'pratapgarh'),
        ('102', 'jayesh', 'soni', '20', '7456985632', 'palanpur'),
        ('103', 'mukesh', 'sharma', '25', '9656985478', 'indore');
 
 -- Insert data in employee_salary table
-INSERT INTO employee_salary (`id`, `fk_employee_id`, `salary`, `date`)
+INSERT INTO employee_salary(`id`, `fk_employee_id`, `salary`, `date`)
 VALUES ('1', '101', '50000', '2024-04-30'),
        ('2', '102', '40000', '2024-03-15'),
        ('3', '101', '10000', '2024-03-20');
 
 -- Insert data in employee_hobby table
-INSERT INTO employee_hobby (`id`, `fk_employee_id`, `fk_hobby_id`)
+INSERT INTO employee_hobby(`id`, `fk_employee_id`, `fk_hobby_id`)
 VALUES ('1', '101', '1'),
        ('2', '102', '2'),
        ('3', '103', '3'),
