@@ -2,7 +2,7 @@
 CREATE TABLE hobby (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(45) NOT NULL
-  );
+);
 
 -- Create employee table
 CREATE TABLE employee (
@@ -12,7 +12,7 @@ CREATE TABLE employee (
   age INT NOT NULL,
   mobile_number VARCHAR(17) NOT NULL,
   address VARCHAR(75)
-  );
+);
 
 -- Create employee_salary table
 CREATE TABLE employee_salary (
@@ -21,7 +21,7 @@ CREATE TABLE employee_salary (
   salary DECIMAL(10, 2) NOT NULL,
   DATE DATE NOT NULL,
   CONSTRAINT fk_employees FOREIGN KEY(fk_employee_id) REFERENCES employee(id)
-  );
+);
 
 -- Create employee_hobby table
 CREATE TABLE employee_hobby (
@@ -30,7 +30,7 @@ CREATE TABLE employee_hobby (
   fk_hobby_id INT NOT NULL,
   CONSTRAINT fk_employee FOREIGN KEY(fk_employee_id) REFERENCES employee(id),
   CONSTRAINT fk_hobby FOREIGN KEY(fk_hobby_id) REFERENCES hobby(id)
-  );
+);
 
 -- Insert data in hobby table
 INSERT INTO hobby (`id`, `name`)
