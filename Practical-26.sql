@@ -59,7 +59,7 @@ VALUES ('1', '101', '1'),
 
 -- Update data of hobby tables
 UPDATE hobby
-SET name='football'
+SET name ='football'
 WHERE id = 1;
 
 -- Update data of employee tables
