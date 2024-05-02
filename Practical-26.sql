@@ -140,7 +140,7 @@ SELECT * FROM employee_hobby;
 SELECT * FROM employee_salary;
 
 -- Create a select single query to get all employee name, all hobby_name in single column.
-SELECT CONCAT (first_name, ' ', last_name) AS employee_name FROM employee
+SELECT CONCAT(first_name, ' ', last_name) AS employee_name FROM employee
 UNION
 SELECT hobby.name FROM hobby;
 
