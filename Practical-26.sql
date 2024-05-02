@@ -1,12 +1,12 @@
 -- Create hobby table
 CREATE TABLE hobby (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id INT NOT NULL PRIMARY KEY,
   name VARCHAR(45) NOT NULL
 );
 
 -- Create employee table
 CREATE TABLE employee (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id INT NOT NULL PRIMARY KEY,
   first_name VARCHAR(45) NOT NULL,
   last_name VARCHAR(45) NOT NULL,
   age INT NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE employee (
 
 -- Create employee_salary table
 CREATE TABLE employee_salary (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id INT NOT NULL PRIMARY KEY,
   fk_employee_id INT NOT NULL,
   salary DECIMAL(10, 2) NOT NULL,
   DATE DATE NOT NULL,
@@ -25,7 +25,7 @@ CREATE TABLE employee_salary (
 
 -- Create employee_hobby table
 CREATE TABLE employee_hobby (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id INT NOT NULL PRIMARY KEY,
   fk_employee_id INT NOT NULL,
   fk_hobby_id INT NOT NULL,
   CONSTRAINT fk_employee FOREIGN KEY (fk_employee_id) REFERENCES employee (id),
@@ -59,7 +59,7 @@ VALUES ('1', '101', '1'),
 
 -- Update data of hobby tables
 UPDATE hobby
-SET name ='football'
+SET name = 'football'
 WHERE id = 1;
 
 -- Update data of employee tables
