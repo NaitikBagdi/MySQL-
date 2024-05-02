@@ -20,7 +20,7 @@ CREATE TABLE employee_salary (
   fk_employee_id INT NOT NULL,
   salary DECIMAL(10, 2) NOT NULL,
   DATE DATE NOT NULL,
-  CONSTRAINT fk_employees FOREIGN KEY(fk_employee_id) REFERENCES employee(id)
+  CONSTRAINT fk_employees FOREIGN KEY (fk_employee_id) REFERENCES employee (id)
 );
 
 -- Create employee_hobby table
@@ -28,8 +28,8 @@ CREATE TABLE employee_hobby (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   fk_employee_id INT NOT NULL,
   fk_hobby_id INT NOT NULL,
-  CONSTRAINT fk_employee FOREIGN KEY(fk_employee_id) REFERENCES employee(id),
-  CONSTRAINT fk_hobby FOREIGN KEY(fk_hobby_id) REFERENCES hobby(id)
+  CONSTRAINT fk_employee FOREIGN KEY (fk_employee_id) REFERENCES employee (id),
+  CONSTRAINT fk_hobby FOREIGN KEY (fk_hobby_id) REFERENCES hobby (id)
 );
 
 -- Insert data in hobby table
@@ -109,7 +109,7 @@ ALTER TABLE employee_hobby
 DROP CONSTRAINT fk_employee;
 
 -- Alter employee_salary
-ALTER TABLE employee_salary ADD CONSTRAINT fk_employees FOREIGN KEY(fk_employee_id) REFERENCES employee(id) ON DELETE CASCADE;
+ALTER TABLE employee_salary ADD CONSTRAINT fk_employees FOREIGN KEY (fk_employee_id) REFERENCES employee (id) ON DELETE CASCADE;
 
 -- Delete employee_salary
 DELETE FROM employee_salary
