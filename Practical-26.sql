@@ -121,7 +121,7 @@ TRUNCATE TABLE hobby;
 -- Truncate hobby tables
 TRUNCATE TABLE employee;
 
--- Truncate hobby tables
+-- Truncate hobby tables.
 TRUNCATE TABLE employee_hobby;
 
 -- Truncate hobby tables
@@ -130,36 +130,28 @@ TRUNCATE TABLE employee_salary;
 -- Create a separate select queries to get a hobby.
 SELECT * FROM hobby;
 
--- Create a separate select queries to get a employee
+-- Create a separate select queries to get a employee.
 SELECT * FROM employee;
 
--- Create a separate select queries to get a employee_hobby
+-- Create a separate select queries to get a employee_hobby.
 SELECT * FROM employee_hobby;
 
--- Create a separate select queries to get a employee_salary
+-- Create a separate select queries to get a employee_salary.
 SELECT * FROM employee_salary;
 
 -- Create a select single query to get all employee name, all hobby_name in single column.
 SELECT CONCAT (first_name, ' ', last_name) AS employee_name FROM employee
-
 UNION
-
 SELECT hobby.name FROM hobby;
 
--- Create a select query to get employee name, his/her employee_salary
+-- Create a select query to get employee name, his/her employee_salary.
 SELECT CONCAT(e.first_name, ' ', e.last_name) AS employee_name, SUM(es.salary) AS salary
-
 FROM employee e
-
 INNER JOIN employee_salary es ON e.id = es.fk_employee_id GROUP BY es.fk_employee_id;
 
 -- Create a select query to get employee name, total salary of employee, hobby name(comma-separated - you need to use subquery for hobby name).
 SELECT CONCAT(e.first_name, ' ', e.last_name) AS employee_name, SUM(es.salary) AS total_salary,
-
 (SELECT GROUP_CONCAT(hobby.name) FROM hobby
-
 INNER JOIN employee_hobby eh ON hobby.id = eh.fk_hobby_id WHERE eh.fk_employee_id = e.id) AS hobby
-
 FROM employee e
-
 LEFT JOIN employee_salary es ON e.id = es.fk_employee_id GROUP BY e.id;
