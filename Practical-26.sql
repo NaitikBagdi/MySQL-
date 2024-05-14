@@ -34,15 +34,15 @@ CREATE TABLE employee_hobby (
 
 -- Insert data in hobby table
 INSERT INTO hobby(`id`, `name`)
-VALUES ('1', 'cricket'),
-       ('2', 'music'),
-       ('3', 'dancing');
+VALUES ('1', 'Cricket'),
+       ('2', 'Music'),
+       ('3', 'Dancing');
 
 -- Insert data in employee table
 INSERT INTO employee(`id`, `first_name`, `last_name`, `age`, `mobile_number`, `address`)
-VALUES ('101', 'Naitik', 'Bagdi', '24', '7854686544', 'pratapgarh'),
-       ('102', 'jayesh', 'soni', '20', '7456985632', 'palanpur'),
-       ('103', 'mukesh', 'sharma', '25', '9656985478', 'indore');
+VALUES ('101', 'Naitik', 'Bagdi', '24', '7854686544', 'Pratapgarh'),
+       ('102', 'Jayesh', 'Soni', '20', '7456985632', 'Palanpur'),
+       ('103', 'Mukesh', 'Sharma', '25', '9656985478', 'Indore');
 
 -- Insert data in employee_salary table
 INSERT INTO employee_salary(`id`, `fk_employee_id`, `salary`, `date`)
@@ -59,12 +59,12 @@ VALUES ('1', '101', '1'),
 
 -- Update data of hobby tables
 UPDATE hobby
-SET name = 'football'
+SET name = 'Football'
 WHERE id = 1;
 
 -- Update data of employee tables
 UPDATE employee
-SET first_name = 'Vishal', last_name = 'varma'
+SET first_name = 'Vishal', last_name = 'Varma'
 WHERE id = 103;
 
 -- Update data of employee_salary tables
